@@ -1,0 +1,15 @@
+@startuml
+title Heart Disease Prediction - Use Case Diagram
+
+actor User
+
+User --> (Fill Health Data Form)
+User --> (Submit Prediction Request)
+User --> (View Prediction Results)
+User --> (View Individual Model Details)
+
+(Fill Health Data Form) --> (Submit Prediction Request) : includes
+(Submit Prediction Request) --> (View Prediction Results) : leads to
+(View Prediction Results) --> (View Individual Model Details) : optional
+
+@enduml

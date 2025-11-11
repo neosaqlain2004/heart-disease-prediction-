@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Heart Disease Prediction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Heart Disease Prediction</h1>
+        <p>Smart Predictions, Empowering You to Make Healthy Heart Decisions</p>
+    </nav>
+    <div class="container">
+        <form id="predictionForm">
+            <div class="form-group">
+                <label for="Smoking">Smoking:</label>
+                <select id="Smoking" name="Smoking" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="AlcoholDrinking">Alcohol Drinking:</label>
+                <select id="AlcoholDrinking" name="AlcoholDrinking" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Stroke">Stroke:</label>
+                <select id="Stroke" name="Stroke" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="DiffWalking">Difficulty Walking:</label>
+                <select id="DiffWalking" name="DiffWalking" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Sex">Sex:</label>
+                <select id="Sex" name="Sex" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="AgeCategory">Age Category:</label>
+                <select id="AgeCategory" name="AgeCategory" required>
+                    <option value="18-24">18-24</option>
+                    <option value="25-29">25-29</option>
+                    <option value="30-34">30-34</option>
+                    <option value="35-39">35-39</option>
+                    <option value="40-44">40-44</option>
+                    <option value="45-49">45-49</option>
+                    <option value="50-54">50-54</option>
+                    <option value="55-59">55-59</option>
+                    <option value="60-64">60-64</option>
+                    <option value="65-69">65-69</option>
+                    <option value="70-74">70-74</option>
+                    <option value="75-79">75-79</option>
+                    <option value="80 or older">80 or older</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Race">Race:</label>
+                <select id="Race" name="Race" required>
+                    <option value="White">White</option>
+                    <option value="Black">Black</option>
+                    <option value="Asian">Asian</option>
+                    <option value="American Indian/Alaskan Native">American Indian/Alaskan Native</option>
+                    <option value="Hispanic">Hispanic</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Diabetic">Diabetic:</label>
+                <select id="Diabetic" name="Diabetic" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                    <option value="No, borderline diabetes">No, borderline diabetes</option>
+                    <option value="Yes (during pregnancy)">Yes (during pregnancy)</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="GenHealth">General Health:</label>
+                <select id="GenHealth" name="GenHealth" required>
+                    <option value="Poor">Poor</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Good">Good</option>
+                    <option value="Very good">Very good</option>
+                    <option value="Excellent">Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="Asthma">Asthma:</label>
+                <select id="Asthma" name="Asthma" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="KidneyDisease">Kidney Disease:</label>
+                <select id="KidneyDisease" name="KidneyDisease" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="SkinCancer">Skin Cancer:</label>
+                <select id="SkinCancer" name="SkinCancer" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="BMI">BMI:</label>
+                <input type="number" id="BMI" name="BMI" step="0.1" min="10" max="100" required />
+            </div>
+            <div class="form-group">
+                <label for="PhysicalHealth">Physical Health (days):</label>
+                <input type="number" id="PhysicalHealth" name="PhysicalHealth" min="0" max="30" required />
+            </div>
+            <div class="form-group">
+                <label for="MentalHealth">Mental Health (days):</label>
+                <input type="number" id="MentalHealth" name="MentalHealth" min="0" max="30" required />
+            </div>
+            <div class="form-group">
+                <label for="SleepTime">Sleep Time (hours):</label>
+                <input type="number" id="SleepTime" name="SleepTime" min="1" max="24" required />
+            </div>
+            <div class="form-group">
+                <label for="PhysicalActivity">Physical Activity:</label>
+                <select id="PhysicalActivity" name="PhysicalActivity" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <button type="button" id="predictBtn">Predict</button>
+        </form>
+
+        <div id="result"></div>
+        <div id="predictionNote">
+            <p>Note: For more reliable predictions, please ensure the following key inputs are entered accurately — Age Category, Smoking, Difficulty Walking, Sex, Diabetic, BMI, General Health, Sleep Time, Physical Activity, and Stroke. These factors have the greatest influence on heart disease risk.</p>
+        </div>
+        <details id="modelDetails">
+            <summary>View Model Details</summary>
+            <div id="detailsContent"></div>
+        </details>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>

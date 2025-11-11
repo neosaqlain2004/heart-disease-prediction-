@@ -1,0 +1,45 @@
+@startuml
+title Heart Disease Prediction Project - Class Diagram
+
+class FlaskApp {
+    - app: Flask
+    + run()
+}
+
+class ModelLoader {
+    - dt: DecisionTreeClassifier
+    - svm: SVC
+    - rf: RandomForestClassifier
+    - xgb: XGBClassifier
+    - ann: Sequential
+    - scaler: StandardScaler
+    + load_models()
+}
+
+class Predictor {
+    + predict(data: dict) : dict
+}
+
+class DataPreprocessor {
+    + map_categorical(data: dict) : DataFrame
+    + scale_features(features: DataFrame) : ndarray
+}
+
+class TrainScript {
+    - data: DataFrame
+    - features: list
+    - target: Series
+    + load_data()
+    + preprocess_data()
+    + train_models()
+    + evaluate_models()
+    + save_models()
+}
+
+FlaskApp --> ModelLoader : uses
+FlaskApp --> Predictor : uses
+Predictor --> DataPreprocessor : uses
+TrainScript --> DataPreprocessor : uses
+TrainScript --> ModelLoader : creates and saves models
+
+@enduml

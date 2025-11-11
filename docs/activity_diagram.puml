@@ -1,0 +1,19 @@
+@startuml
+title Heart Disease Prediction - Activity Diagram
+
+start
+:User fills form;
+:Submit data;
+:Validate input;
+:Map categoricals;
+:Scale features;
+:Run model predictions;
+:Calculate ultimate prediction;
+if (risk == "Yes") then (yes)
+    :Add recommendations;
+else (no)
+endif
+:Return results;
+:Display on page;
+stop
+@enduml
